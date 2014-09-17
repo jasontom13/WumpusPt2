@@ -475,6 +475,8 @@ public class HunterModel extends Observable{
 					}
 				}
 			}
+			setChanged();
+			notifyObservers();
 		}
 
 		/* getDirection() prompts the player for a direction and then returns the direction

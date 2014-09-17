@@ -32,7 +32,6 @@ public class TextView extends JPanel implements Observer{
 		setLayout(new BorderLayout());
 		setBackground(Color.WHITE);
 	
-	
 		status.setHorizontalAlignment(SwingConstants.CENTER);
 		message.setHorizontalAlignment(SwingConstants.CENTER);
 		text.setFont(new Font("Courier",Font.PLAIN, 12));
@@ -43,17 +42,15 @@ public class TextView extends JPanel implements Observer{
 		add(scroll, BorderLayout.CENTER);
 		add(message, BorderLayout.SOUTH);
 		add(status, BorderLayout.NORTH);
-		
 	}
 	
-	
-	@Override
+		@Override
 	  public void update(Observable observed, Object arg) {
 //		text.setText(game.toString());
 	    HunterModel model = (HunterModel) observed;
 	    if (model.gameOver())
 	    {
-	    	status.setText("GAMEOVER NOOB");
+	    	status.setText("GAMEOVER");
 	    	message.setText(model.gameOverMessage());
 	    	for (int i=0; i<model.getDungeon().length; i++){
 	    		for (int j=0; j<model.getDungeon()[i].length; j++){
