@@ -141,7 +141,7 @@ public class HunterGUI extends JFrame{
 	private JTabbedPane tabbedPanels;
 	private ImageView image;
 	private HunterModel model = new HunterModel();
-	private JPanel imageView = new ImageView();
+	private JPanel imageView = new ImageView(model);
 	private JPanel textView = new TextView(model);
 	private JPanel buttons = new Buttons();
 	private JPanel buttonPanel = new JPanel();
