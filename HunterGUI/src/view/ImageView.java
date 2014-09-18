@@ -20,11 +20,13 @@ import model.HunterModel;
 
 public class ImageView extends JPanel implements Observer{
 
-	private Image image;
-	private Image floor;
+	private BufferedImage image;
+	private BufferedImage floor;
 	private Dimension size;
 	private Point pos;
 	HunterModel game;
+	private JPanel view = new JPanel();
+	
 
 	
 	public ImageView(String filename) {
@@ -69,6 +71,12 @@ public class ImageView extends JPanel implements Observer{
 //			}
 //		}
 		
+//		view.setPreferredSize(new Dimension(500,500));
+//		view.setBackground(Color.BLACK);
+//		add(view);
+//		System.out.println(view.getAlignmentX());
+//		System.out.print(view.getAlignmentY());
+		
 		
 		
 	}
@@ -82,18 +90,18 @@ public class ImageView extends JPanel implements Observer{
 	public void paintComponent(Graphics g){
 		Graphics2D g2 = (Graphics2D) g;
 	
-//	    int x = (this.getWidth() - floor.getWidth(null)) / 2;
-//	    int y = (this.getHeight() - floor.getHeight(null)) / 2;
+	    int x = (this.getWidth() - floor.getWidth(null)) / 2;
+	    int y = (this.getHeight() - floor.getHeight(null)) / 2;
 		for (int i=0; i<game.getDungeon().length; i++){
 			for (int j=0; j<game.getDungeon()[1].length;j++){
-				g2.drawImage(floor, this.getHeight()/game.getDungeon().length*i, this.getWidth()/game.getDungeon()[i].length*j, null);
-			}
+				g2.drawImage(floor, 14+floor.getHeight()*i, 5+floor.getWidth()*j, null);
 		}
+		
 		
 	
 		
 				
 	}
 
-
+	}
 }

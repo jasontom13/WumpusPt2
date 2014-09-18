@@ -89,21 +89,21 @@ public class HunterModel extends Observable{
 		 */
 		public HunterModel(){
 			
-			Scanner keyBoard = new Scanner(System.in);
-		
-			System.out.println("Enter dungeon size 10 or greater:");
-			try {
-				boardSize = keyBoard.nextInt();
-				while(boardSize < 10){
-					System.out.println("Invalid size. Please enter a number 10 or greater:");
-					boardSize = keyBoard.nextInt();
-				}
-			} catch (InputMismatchException e)
-			{
-				System.out.println("NAN dumbass.");
-				System.exit(1);
-			}
-		
+//			Scanner keyBoard = new Scanner(System.in);
+//		
+//			System.out.println("Enter dungeon size 10 or greater:");
+//			try {
+//				boardSize = keyBoard.nextInt();
+//				while(boardSize < 10){
+//					System.out.println("Invalid size. Please enter a number 10 or greater:");
+//					boardSize = keyBoard.nextInt();
+//				}
+//			} catch (InputMismatchException e)
+//			{
+//				System.out.println("NAN dumbass.");
+//				System.exit(1);
+//			}
+			boardSize=10;
 			
 			dungeon = new Room[boardSize][boardSize];
 			
@@ -616,9 +616,13 @@ public class HunterModel extends Observable{
 			return playGameString;
 		}
 		
-		public void setVisible(int i, int j)
+		public void setVisible()
 		{
-			dungeon[i][j].isVisible=true;
+	    	for (int i=0; i<dungeon.length; i++){
+	    		for (int j=0; j<dungeon[i].length; j++){
+	    			dungeon[i][j].isVisible=true;
+	    		}
+	    	}
 		}
 }
 

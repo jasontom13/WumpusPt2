@@ -52,12 +52,7 @@ public class TextView extends JPanel implements Observer{
 	    {
 	    	status.setText("GAMEOVER");
 	    	message.setText(model.gameOverMessage());
-	    	for (int i=0; i<model.getDungeon().length; i++){
-	    		for (int j=0; j<model.getDungeon()[i].length; j++){
-	    			model.setVisible(i,j);
-	    		}
-	    	}
-	    	
+	    	model.setVisible();
 	    	String map = model.toString();
 	    	text.setText(map);
 	    	model.deleteObserver(this);
