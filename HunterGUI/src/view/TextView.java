@@ -34,7 +34,7 @@ public class TextView extends JPanel implements Observer{
 	
 		status.setHorizontalAlignment(SwingConstants.CENTER);
 		message.setHorizontalAlignment(SwingConstants.CENTER);
-		text.setFont(new Font("Courier",Font.PLAIN, 12));
+		text.setFont(new Font("Courier",Font.PLAIN, 16));
 		text.setLayout(null);
 		text.setLocation(200,200);
 		text.setText(game.toString());

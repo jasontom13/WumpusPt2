@@ -169,7 +169,7 @@ public class HunterGUI extends JFrame{
 	private void layoutGUI() {
 
 		setTitle("Hunter and the Wumpus");
-		setSize(550,700);
+		setSize(530,675);
 		setLocation(700,300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());

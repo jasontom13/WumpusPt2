@@ -88,7 +88,7 @@ public class HunterModel extends Observable{
 		 * user input for dungeon size and randomized pit/wumpus/hunter/slime/blood/goop locations.
 		 */
 		public HunterModel(){
-			
+//			
 //			Scanner keyBoard = new Scanner(System.in);
 //		
 //			System.out.println("Enter dungeon size 10 or greater:");
@@ -103,6 +103,7 @@ public class HunterModel extends Observable{
 //				System.out.println("NAN dumbass.");
 //				System.exit(1);
 //			}
+			
 			boardSize=10;
 			
 			dungeon = new Room[boardSize][boardSize];
